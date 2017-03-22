@@ -1,0 +1,87 @@
+@import './bootstrap/mixins';
+@import './variables';
+
+html, body, h1, h2, h3, h4 {
+    font-family: "Open Sans",sans-serif;
+}
+
+html, body {
+    background: #eef1f5;
+    font-size: 14px;
+}
+
+hr {
+    border-color: #c7c7c7;
+}
+
+.center-content {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table {
+    thead {
+        border-top: 2px solid #ddd;
+        th {
+            font-weight: bold;
+        }
+    }
+    tbody {
+        > tr {
+            > td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.actions-bar {
+    padding-bottom: 20px;
+    ul {
+        padding: 0 5px;
+
+        > li {
+            float: left;            
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+     
+            select {
+                height: 34px;
+                padding: 0px 8px;
+            }
+        }
+    } 
+   
+}
+
+.clear {
+    clear: both;
+}
+
+.pager {
+    li >a{
+        cursor: pointer;
+    }
+}
+
+.build-details {
+    .form-group {
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.manual-import {
+    .input-group {
+        margin-bottom: 10px;
+        .input-group-addon {
+            min-width: 114px;
+        }
+    }
+}
+
+@import './components/nav.less';
+@import './components/loading.less';

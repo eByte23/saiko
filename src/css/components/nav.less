@@ -1,0 +1,32 @@
+@base-color: #2b3643;
+@selected-color: #3e4b5c;
+@font-color: white;
+
+.navbar-inbuild {
+    background-color: @base-color;
+    border-radius: 0;
+
+    .navbar-brand {
+        padding: 5px 15px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .nav {        
+        &> li {
+            &.active {
+                a {
+                    background-color: @selected-color;
+                }
+            }
+            a {
+                color: @font-color;
+                &:hover, &:focus {
+                    background-color: @selected-color;
+                }
+            }
+        }       
+    }
+}
